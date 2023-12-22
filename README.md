@@ -15,5 +15,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Site infprmation
 
-![app](/Screenshot(20).png)
+![app](/public/Screenshot%20(20).png)
 
