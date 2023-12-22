@@ -5,7 +5,9 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { addPost } from '../../redux/actions/postActions';
 import toast from 'react-hot-toast';
+import { useRouter } from 'next/router';
 const NewPost = () => {
+  const router = useRouter();
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
 
@@ -15,6 +17,7 @@ const NewPost = () => {
       const response = await dispatch(addPost(data));
      if(response.status == 201){
       setLoading(false);
+      router.push('/');
       toast.success("Blog created successfully.")
 
      }
